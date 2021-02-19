@@ -1,0 +1,52 @@
+package com.zoho.test;
+
+import java.util.Scanner;
+
+public class zoho_level_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		String s =in.next();
+		int n=s.length();
+		int pos=0;
+		int mid=0;
+		String newstr ="";
+		int length=0;
+		int jpos=0;
+		for(int i=0;i<s.length();i++) {
+			//System.out.println(" string "+newstr);
+			for(int j=0;j<n-i-1;j++) {
+				
+				System.out.print(" ");
+			}
+			if(pos>n/2) {
+				mid=0;
+			}else {
+			mid= n/2;
+			newstr =newstr+s.charAt(i);
+			}
+			if(mid==0) {
+				for(int k=n/2;k<n;k++) {
+					
+					System.out.print(s.charAt(k));
+				}
+				jpos++;
+
+				length=jpos-1;
+			}else {
+				length=i;
+			}
+				for(int k=0;k<=length;k++) {
+					System.out.print(s.charAt(mid++));
+				}
+
+			System.out.println();
+			
+			//System.out.println(newstr);
+			pos++;
+		}
+
+	}
+
+}
